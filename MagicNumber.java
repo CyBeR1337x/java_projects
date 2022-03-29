@@ -1,16 +1,6 @@
+package project_1;
 import java.util.Scanner;
 public class Q4 {
-	
-	public static boolean isInt(double N) {
-		int x = (int) N;
-		double temp = N - x;
-		
-		if(temp > 0) {
-			return false;
-		}
-		return true;
-	}
-	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
@@ -20,8 +10,8 @@ public class Q4 {
 		int[] divisors = new int[15];
 		int offset = 0;
 		for (int i = (val-1); i >= 1; i--) {
-			double res = (double)val / i;
-			if (isInt(res))
+			double res = (double)val % i;
+			if (res == 0)
 				divisors[offset++] = i;
 		}
 		
@@ -35,6 +25,7 @@ public class Q4 {
 			System.out.println(0);
 		
 		input.close();
+		
 		
 	}
 
