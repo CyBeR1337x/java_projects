@@ -13,7 +13,7 @@ public class Student {
 	}
 	
 	public void updateName(Student[] array, String name, int id, int limit) {
-		int found = 0;z
+		int found = 0;
 		
 		for (int i = 0; i <= limit; i++) {
 			if (id == array[i].id) {
